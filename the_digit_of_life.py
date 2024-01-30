@@ -1,5 +1,4 @@
 """
-Task:
     Digit of Life is a digit evaluated using somebody's birthday.
     It's simple - you just need to sum all the digits of the date.
     If the result contains more than one digit, you have to repeat the addition until you get exactly one digit.
@@ -9,16 +8,14 @@ Task:
     2 + 0 + 1 + 7 + 0 + 1 + 0 + 1 = 12
     1 + 2 = 3
 
-    Write a program which:
+    Program:
         - asks the user her/his birthday (in the format YYYYMMDD or YYYYDDMM or MMDDYYYY)
         - outputs the "Digit of Life" for the date.
 """
 
-
 def get_birthday():
     birthday_date = input("When is your birthday? (Pass date in YYYYMMDD format) ")
     return birthday_date
-
 
 def calculate_digit_of_life(birthday_date):
     digits = [int(digit) for digit in birthday_date.strip()]
@@ -30,16 +27,7 @@ def calculate_digit_of_life(birthday_date):
             break
     return result
 
-
-def main():
-    try:
-        while True:
-            birthday_date = get_birthday()
-            digit_of_life = calculate_digit_of_life(birthday_date)
-            print("Your Digit of Life: ", digit_of_life)
-    except KeyboardInterrupt:
-        exit()
-
-
-if __name__ == "__main__":
-    main()
+while True:
+    birthday_date = get_birthday()
+    digit_of_life = calculate_digit_of_life(birthday_date)
+    print("Your Digit of Life: ", digit_of_life)

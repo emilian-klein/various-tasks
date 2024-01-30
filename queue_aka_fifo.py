@@ -1,15 +1,11 @@
 """
-Task:
-    Implement the Queue class with two basic operations:
+    Program implements the Queue class with two basic operations:
     - put(element), which puts an element at end of the queue;
-    - get(), which takes an element from the front of the queue and returns it as the result
-      (the queue cannot be empty to successfully perform it.)
+    - get(), which takes an element from the front of the queue and returns it as the result (the queue cannot be empty to successfully perform it.)
 """
-
 
 class QueueError(IndexError):
     pass
-
 
 class Queue:
     def __init__(self):
@@ -26,14 +22,12 @@ class Queue:
         else:
             raise QueueError
 
-
-if __name__ == "__main__":
-    queue = Queue()
-    queue.put(1)
-    queue.put("dog")
-    queue.put(False)
-    try:
-        for i in range(4):
-            print(queue.get())
-    except:
-        print("Queue error")
+queue = Queue()
+queue.put(1)
+queue.put("dog")
+queue.put(False)
+try:
+    for i in range(4):
+        print(queue.get())
+except QueueError:
+    print("Queue error")

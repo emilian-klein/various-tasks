@@ -1,11 +1,10 @@
 """
-Task:
-    Create classes called Triangle and Point. The constructor of Triangle class accepts three arguments - all of them
+    Program implements classes called Triangle and Point. The constructor of Triangle class accepts three arguments - all of them
     are objects of the Point class. The points are stored inside the object as a private list, the class provides a
     parameterless method called perimeter(), which calculates the perimeter of the triangle described by the three points.
 """
-import math
 
+import math
 
 class Point:
     def __init__(self, x=0.0, y=0.0):
@@ -24,7 +23,6 @@ class Point:
     def distance_from_point(self, point):
         return self.distance_from_xy(point.getx(), point.gety())
 
-
 class Triangle:
     def __init__(self, vertice1, vertice2, vertice3):
         self.__triangle_points = [vertice1, vertice2, vertice3]
@@ -35,7 +33,5 @@ class Triangle:
         side3 = self.__triangle_points[2].distance_from_point(self.__triangle_points[0])
         return side1 + side2 + side3
 
-
-if __name__ == "__main__":
-    triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
-    print(triangle.perimeter())
+triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
+print(triangle.perimeter())

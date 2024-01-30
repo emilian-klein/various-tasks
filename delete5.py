@@ -1,13 +1,10 @@
 """
-Task:
-    Write a function 'solution' that, given an integer N, returns the maximum possible value obtainable by deleting
-    one '5' digit from the decimal representation of N. It is guaranteed that N will contain at least one '5' digit.
+    Program finds the maximum possible value obtainable by deleting one '5' digit from the decimal representation of given number.
+    It is assumed that number will contain at least one '5' digit.
 """
-
 
 def convert_number_to_digits_list(number):
     return [int(digit) for digit in str(number)]
-
 
 def solution(n):
     all_possible_numbers = []
@@ -24,8 +21,6 @@ def solution(n):
                 all_possible_numbers.append(possible_number * -1)
     print(max(all_possible_numbers))
 
-
-if __name__ == "__main__":
-    test_numbers = [15958, -5859, -5050, 6525, 78565]
-    for number in test_numbers:
-        solution(number)
+test_numbers = [15958, -5859, -5050, 6525, 78565, -154255]
+for number in test_numbers:
+    solution(number)

@@ -1,12 +1,9 @@
 """
-Task:
-    Write function, which behaves almost exactly like the original split() method:
-    - it should accept exactly one argument - a string,
-    - it should return a list of words created from the string, divided in the places where the string contains whitespaces,
-    - if the string is empty, the function should return an empty list,
-    - its name should be mysplit().
+    Program implements a function, which behaves almost exactly like the original split() method:
+    - it accepts exactly one argument - a string,
+    - it returns a list of words created from the string, divided in the places where the string contains whitespaces,
+    - if the string is empty, the function returns an empty list.
 """
-
 
 def mysplit(string):
     output_list = []
@@ -21,10 +18,8 @@ def mysplit(string):
         output_list.append(substring)
     return output_list 
 
-
-if __name__ == "__main__":
-    print(mysplit("To be or not to be, that is the question"))
-    print(mysplit("To be or not to be,that is the question"))
-    print(mysplit("   "))
-    print(mysplit(" abc "))
-    print(mysplit(""))
+print(mysplit("To be or not to be, that is the question"))
+print(mysplit("To be or not to be,that is the question"))
+print(mysplit("   "))
+print(mysplit(" abc "))
+print(mysplit(""))

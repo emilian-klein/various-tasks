@@ -1,9 +1,7 @@
 """
-Task:
-    Create a function that takes an integer and returns the factorial of that integer.
+    Program takes an integer and returns the factorial of that integer.
     That is, the integer multiplied by all positive lower integers.
 """
-
 
 def factorial(number):
     if number == 0:
@@ -14,8 +12,6 @@ def factorial(number):
             result *= x
         return result
 
-
-if __name__ == "__main__":
-    test_numbers = [3, 5, 10]
-    for number in test_numbers:
-        print(factorial(number))
+test_numbers = [3, 5, 10]
+for number in test_numbers:
+    print(factorial(number))
